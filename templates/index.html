@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Attendance System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+             AI Attendance System
+        </h1>
+
+        <p class="subtitle">
+            Face Recognition Based Smart Attendance
+        </p>
+
+        <img src="{{ url_for('video') }}"
+             class="video-feed">
+
+        <br>
+
+        <a href="/attendance">
+
+            <button class="primary-btn">
+
+                 View Attendance
+
+            </button>
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

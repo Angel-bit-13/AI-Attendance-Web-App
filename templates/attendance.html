@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Attendance Records</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            📋 Attendance Records
+        </h1>
+
+        <p class="subtitle">
+            Students Detected By AI Face Recognition System
+        </p>
+
+        <div class="table-container">
+
+            <table>
+
+                <tr>
+                    <th>👤 Student Name</th>
+                    <th>⏰ Attendance Time</th>
+                </tr>
+
+                {% for row in records %}
+
+                <tr>
+
+                    <td>
+                        {{ row[0] }}
+                    </td>
+
+                    <td>
+                        {{ row[1] }}
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+        <br>
+
+        <a href="/">
+
+            <button class="primary-btn">
+
+                ⬅ Back To Home
+
+            </button>
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>
